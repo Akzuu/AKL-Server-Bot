@@ -14,11 +14,6 @@ const schema = new Schema({
   password: {
     type: String,
   },
-  serverID: {
-    type: String,
-    unique: true,
-    required: true,
-  },
   gameState: {
     clanNames: {
       terrorist: {

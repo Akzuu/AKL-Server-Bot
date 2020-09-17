@@ -17,8 +17,7 @@ const schema = {
 };
 
 const handler = async (req, reply) => {
-  console.log('Received log!');
-  commandHandler('0.0.0.0', '27015', req.body);
+  commandHandler(req.ip, req.headers['x-server-addr'].split(':')[1], req.body);
 
   reply.send({
     status: 'OK',
