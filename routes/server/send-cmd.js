@@ -26,7 +26,7 @@ const schema = {
 
 const handler = async (req, reply) => {
   try {
-    await rcon.sendRconCmd('0.0.0.0', '27015', req.body.command);
+    await rcon.sendRconCmd('192.168.1.32', '27015', req.body.command);
   } catch (error) {
     log.error('Error sending command!', error);
     reply.status(500).send({

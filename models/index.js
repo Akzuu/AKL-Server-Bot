@@ -1,5 +1,5 @@
-const server = require('./server');
+const Server = require('./server');
 
 module.exports = {
-  server,
+  Server,
 };

@@ -34,6 +34,16 @@ const schema = new Schema({
       type: Boolean,
       default: false,
     },
+    tacticalTimeoutUsed: {
+      terrorist: {
+        type: Boolean,
+        default: false,
+      },
+      ct: {
+        type: Boolean,
+        default: false,
+      },
+    },
     currentMap: {
       type: String,
       default: 'de_dust2',

@@ -17,6 +17,7 @@ const schema = {
 };
 
 const handler = async (req, reply) => {
+  console.log('Received log!');
   commandHandler('0.0.0.0', '27015', req.body);
 
   reply.send({
