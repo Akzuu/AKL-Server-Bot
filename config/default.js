@@ -19,4 +19,5 @@ module.exports = {
       },
     },
   },
+  maps: ['de_dust2', 'cs_office', 'de_cbble'],
 };

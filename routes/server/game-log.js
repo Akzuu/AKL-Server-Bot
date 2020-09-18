@@ -11,12 +11,24 @@ const schema = {
         status: {
           type: 'string',
         },
+        message: {
+          type: 'string',
+        },
       },
     },
   },
 };
 
 const handler = async (req, reply) => {
+  if (!req.headers['x-server-addr']) {
+    reply.send({
+      status: 'OK',
+      message: 'Request received, but it wasn\'t made by the server',
+    });
+    return;
+  }
+
+  console.log('Log received');
   commandHandler(req.ip, req.headers['x-server-addr'].split(':')[1], req.body);
 
   reply.send({

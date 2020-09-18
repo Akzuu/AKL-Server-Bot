@@ -106,10 +106,14 @@ const schema = new Schema({
       enum: ['bo1', 'bo3', 'bo5'],
       default: 'bo1',
     },
-    gameMode: {
+    gamemode: {
       type: String,
       enum: ['5on5', '2on2', '1on1'],
       default: '5on5',
+    },
+    currentPicker: {
+      type: String,
+      default: 'NONE',
     },
   },
 }, {
