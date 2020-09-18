@@ -1,4 +1,4 @@
-const { commandHandler } = require('../../lib');
+const { commandHandler, log } = require('../../lib');
 
 const schema = {
   description: 'Server logs will be sent to this addr',
@@ -28,7 +28,7 @@ const handler = async (req, reply) => {
     return;
   }
 
-  console.log('Log received');
+  log.info('Log received');
   commandHandler(req.ip, req.headers['x-server-addr'].split(':')[1], req.body);
 
   reply.send({
