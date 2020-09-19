@@ -59,6 +59,10 @@ const schema = new Schema({
       type: Boolean,
       default: false,
     },
+    knifeWinner: {
+      type: String,
+      default: 'NONE',
+    },
     round: {
       type: Number,
       default: 0,
